@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var config = {
-    user: 'coco98',
-    database: 'coco98',
+    user: 'ssrin132',
+    database: 'ssrin132',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
@@ -179,7 +179,7 @@ app.get('/get-comments/:articleName', function (req, res) {
       }
    });
 });
-
+/*
 app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
@@ -236,3 +236,4 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+*/
