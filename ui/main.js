@@ -1,3 +1,4 @@
+alert('jjjj');
 function loadLoginForm () {
     alert('in main');
     var loginHtml = `
