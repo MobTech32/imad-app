@@ -31,6 +31,25 @@
     alert('olllkk');
     function ss () {
         alert('yes');
+         var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+              // Take some action
+              if (request.status === 200) {
+                  alert('User created successfully');
+                  submit.value = 'Registered!';
+              } 
+              else
+              { alert('no');
+              }
+              else
+              {
+                  alert('no');
+              }
+        
+        
     }
     
                        
