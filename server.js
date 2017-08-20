@@ -210,7 +210,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     res.status(403).send('Only logged in users can comment');
     }
 });
-
+/*
 app.get('/articles/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
   pool.query('SELECT * FROM article WHERE title = $1', [req.params.articleName], function (err, result) {
@@ -225,7 +225,7 @@ app.get('/articles/:articleName', function (req, res) {
         }
     }
   });
-});
+});*/
 
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
@@ -233,5 +233,5 @@ app.get('/ui/:fileName', function (req, res) {
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
-  console.log('IMAD course app listening on port ${port}!');
+/*  console.log('IMAD course app listening on port ${port}!');*/
 });
