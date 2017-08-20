@@ -21,7 +21,7 @@ app.use(session({
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
-
+/*
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
@@ -66,7 +66,7 @@ function createTemplate (data) {
     `;
     return htmlTemplate;
 }
-
+*/
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -155,7 +155,7 @@ app.get('/logout', function (req, res) {
 });
 
 var pool = new Pool(config);
-
+/*
 app.get('/get-articles', function (req, res) {
    // make a select request
    // return a response with the results
@@ -210,7 +210,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     res.status(403).send('Only logged in users can comment');
     }
 });
-/*
+
 app.get('/articles/:articleName', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
   pool.query('SELECT * FROM article WHERE title = $1', [req.params.articleName], function (err, result) {
