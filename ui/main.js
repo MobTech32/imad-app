@@ -1,2 +1,1 @@
-console.log('Loaded!');
-window.alert('loaded');
+alert('hi');
