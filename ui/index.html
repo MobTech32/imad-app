@@ -33,8 +33,9 @@
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
+                alert('1');
                 loadLoggedInUser(this.responseText);
-            } else {
+            } else { alert('2');
                 loadLoginForm();
             }
         }
